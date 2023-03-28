@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="image-container">
+    <img src="{{ url_for('static', filename='shop.png') }}" alt="Kubernetes" class="center-image">
+  </div>
+  <h1 class="center">Najlepszy sklep na świecie</h1>
+  <p class="center">Wersja aplikacji: {{ version }}</p>
+{% endblock %}

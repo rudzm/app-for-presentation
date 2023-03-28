@@ -1,0 +1,53 @@
+body {
+    background-color: white;
+  }
+  
+.center {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.5em;
+}
+.center-image {
+    display: block;
+    margin: auto;
+    max-width: 20%;
+  }
+  
+  .image-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .table-container {
+    text-align: center;
+  }
+  
+  .center-table {
+    display: inline-table;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+    border: 2px solid black;
+    text-align: center;
+  }
+  
+  .center-table th,
+  .center-table td {
+    padding: 5px 10px;
+  }
+  

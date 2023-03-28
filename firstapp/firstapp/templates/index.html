@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="image-container">
+    <img src="{{ url_for('static', filename='kubernetes.svg') }}" alt="Kubernetes" class="center-image">
+  </div>
+  <h1 class="center">Wprowadzenie do K8s</h1>
+  <div class="table-container">
+  <table class="center-table">
+    <thead>
+      <tr>
+        <th>Interfejs</th>
+        <th>Adres IP</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for interface, ip in interfaces.items() %}
+        <tr>
+          <td>{{ interface }}</td>
+          <td>{{ ip }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+  <p class="center">Wersja aplikacji: {{ version }}</p>
+{% endblock %}
