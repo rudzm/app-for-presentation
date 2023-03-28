@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Lista użytkowników</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Imię i nazwisko</th>
+        <th>Email</th>
+        <th>Akcje</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{ user[0] }}</td>
+          <td>{{ user[1] }}</td>
+          <td>{{ user[2] }}</td>
+          <td>
+            <a href="{{ url_for('edit', id=user[0]) }}">Edytuj</a>
+            <form action="{{ url_for('delete', id=user[0]) }}" method="POST">
+              <button type="submit">Usuń</button>
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p><a href="{{ url_for('add') }}">Dodaj użytkownika</a></p>
+{% endblock %}

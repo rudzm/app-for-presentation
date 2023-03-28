@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Edytuj użytkownika</h1>
+  <form action="{{ url_for('edit', id=user[0]) }}" method="POST">
+    <div>
+      <label for="name">Imię i nazwisko:</label>
+      <input type="text" name="name" id="name" value="{{ user[1] }}">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" value="{{ user[2] }}">
+    </div>
+    <div>
+      <button type="submit">Zapisz</button>
+    </div>
+  </form>
+{% endblock %}

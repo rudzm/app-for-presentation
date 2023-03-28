@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Dodaj użytkownika</h1>
+  <form action="{{ url_for('add') }}" method="POST">
+    <div>
+      <label for="name">Imię i nazwisko:</label>
+      <input type="text" name="name" id="name">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email">
+    </div>
+    <div>
+      <button type="submit">Dodaj</button>
+    </div>
+  </form>
+{% endblock %}
